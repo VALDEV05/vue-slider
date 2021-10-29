@@ -14,7 +14,14 @@ body {
     background-color: rgb(51, 50, 50);
 }
 
-.container {
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+
+/* .container {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -102,4 +109,4 @@ h3 {
 .click:active {
     border: 2px solid white;
     color: white;
-}
+} */
