@@ -49,7 +49,7 @@
             
             .reel img {
                 width: 100%;
-                height: calc(100 / 5);
+                height: 160px;
             }
             
             .commands {

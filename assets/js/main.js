@@ -48,7 +48,13 @@ const app = new Vue({
             } else if (this.counter > 4) {
                 this.counter = 0;
             }
+        },
+        timedSlide() {
+            this.slideDown();
+            this.counterControl();
         }
+    },
+    mounted() {
+        setInterval(this.timedSlide, 1500)
     }
-
 })
