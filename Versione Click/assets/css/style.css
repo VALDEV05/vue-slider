@@ -1,0 +1,88 @@
+ * {
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ .clearfix::after {
+     clear: both;
+     display: table;
+     content: "";
+ }
+ 
+ .slider {
+     width: 100vw;
+     height: 100vh;
+ }
+ 
+ .preview {
+     max-width: 80%;
+     position: relative;
+     float: left;
+ }
+ 
+ .preview>.slideText {
+     position: absolute;
+     bottom: 25px;
+     right: 25px;
+     text-align: end;
+     font-size: 2rem;
+     color: white;
+ }
+ 
+ .preview>.slideText>h2 {
+     font-size: 3rem;
+ }
+ 
+ .preview .image>img {
+     width: 100%;
+     height: 100vh;
+     object-fit: cover;
+ }
+ 
+ .reel {
+     float: left;
+     max-width: 20%;
+     background-color: black;
+     height: 100vh;
+ }
+ 
+ .reel img {
+     width: 100%;
+     height: 160px;
+ }
+ 
+ .commands {
+     height: 92%;
+     position: absolute;
+     display: flex;
+     flex-direction: column;
+     top: 35px;
+     right: 140px;
+     justify-content: space-between;
+     z-index: 2;
+ }
+ 
+ .commands>span {
+     background-color: white;
+     font-size: 2rem;
+     width: 30px;
+     height: 30px;
+     border: 1px solid black;
+     border-radius: 50%;
+     vertical-align: middle;
+     line-height: 30px;
+     text-align: center;
+ }
+ 
+ .inactive {
+     opacity: .5;
+ }
+ 
+ .reelImg {
+     background-color: black;
+ }
+ 
+ .active {
+     border: 2px solid lightgray;
+ }

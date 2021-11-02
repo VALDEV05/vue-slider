@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- TITLE -->
+    <title>Carousel Vue Js</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="slider clearfix">
+            <div class="preview">
+                <div class="slideText">
+                    <h2>{{slides[counter].name}}</h2>
+                    <p>{{slides[counter].text}}</p>
+                </div>
+                <div class="image">
+                    <img :src="slides[counter].image">
+                </div>
+            </div>
+            <div class="reel">
+                <div class="commands">
+                    <span @click="slideUp">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </span>
+                    <span @click="slideDown">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div v-for="(slide, index) in slides">
+                    <img v-bind:class="[(index == counter) ? 'active' :
+                            'inactive']" :src="slide.image" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
